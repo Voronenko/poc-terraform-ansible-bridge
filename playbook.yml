@@ -1,0 +1,18 @@
+---
+- name: TerraformAnsiblePOC
+  hosts: localhost
+  gather_facts: no
+
+  pre_tasks:
+
+    - include_vars: "env-default-secure-vars.yml"
+
+    - include_vars:  "env-default-vars.yml"
+
+  tasks:
+    
+    - debug: var="shared_secure_var1"
+
+    - debug: var="shared_secure_var2"
+
+
